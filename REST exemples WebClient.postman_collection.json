@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "519a4671-5baf-4c37-9bb7-9218b0236e4c",
+		"name": "REST exemples WebClient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7216865"
+	},
+	"item": [
+		{
+			"name": "GET NO PARAMS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/getNoParam",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"getNoParam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET WITH DELAY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/getWithDelay",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"getWithDelay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET WITH PARAM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/getWithParam?param1=Premiere section&param2=Deuxième section",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"getWithParam"
+					],
+					"query": [
+						{
+							"key": "param1",
+							"value": "Premiere section"
+						},
+						{
+							"key": "param2",
+							"value": "Deuxième section"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST WITH BODY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/postWithBody?value=5",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"postWithBody"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST WITH BODY ERROR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/postWithBody?value=11",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"postWithBody"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "restType",
+			"value": "webClientMono"
+		}
+	]
+}
