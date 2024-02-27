@@ -74,6 +74,25 @@
 			"response": []
 		},
 		{
+			"name": "GET RETURNING OBJECT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/{{restType}}/getReturningObject",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"{{restType}}",
+						"getReturningObject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST WITH BODY",
 			"request": {
 				"method": "GET",
@@ -124,10 +143,36 @@
 			"response": []
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "restType",
-			"value": "restTemplate"
+			"value": "restClient"
+		},
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "string",
+			"disabled": true
 		}
 	]
 }

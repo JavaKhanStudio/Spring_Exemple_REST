@@ -33,7 +33,7 @@ public class RestClientController {
                 .get()
                 .uri(TARGET_HOST + "/server/getNoParam")
                 .retrieve()
-                .body(String.class);
+                .body(String.class) + " Rest Client";
     }
 
     @GetMapping("/getWithDelay")

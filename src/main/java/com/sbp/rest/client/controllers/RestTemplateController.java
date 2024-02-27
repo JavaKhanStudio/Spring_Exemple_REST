@@ -24,7 +24,7 @@ public class RestTemplateController {
     @GetMapping("/getError")
     public String getError() {
         String url = TARGET_HOST + "/noPath";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject(url, String.class) + " Rest template";
     }
 
     @GetMapping("/getWithDelay")
@@ -44,7 +44,7 @@ public class RestTemplateController {
     @GetMapping("/getNoParam")
     public String callExternalServiceNoParam() {
         String url = TARGET_HOST + "/getNoParam";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject(url, String.class) + " Rest template";
     }
 
     @GetMapping("/getWithParam")

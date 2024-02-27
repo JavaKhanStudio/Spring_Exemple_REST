@@ -36,7 +36,7 @@ public class ServerController {
             if (price < 10) {
                 return ResponseEntity.ok("OK");
             } else {
-                return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body("Value is too high");
+                return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Value is too high");
             }
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Invalid value format");
